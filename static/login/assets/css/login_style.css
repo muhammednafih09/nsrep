@@ -1,0 +1,38 @@
+body {
+  background-color: #eaf6f6;
+}
+
+.container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  margin-top: 20vh;
+}
+
+.card {
+  background-color: #2b4865;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.forgot-link {
+  color: #dae3e3;
+  text-decoration: none;
+}
+
+.forgot-link:hover {
+  text-decoration: none !important;
+  color: #dae3e3 !important;
+}
+
+.bottom {
+  padding: 1vh;
+  align-items: center !important;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  width: 15vh;
+  background-color: #256d85 !important;
+}

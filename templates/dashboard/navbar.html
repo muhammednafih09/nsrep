@@ -1,0 +1,16 @@
+{% load static %}
+<!-- navigation bar -->
+<nav class="navbar fixed-top">
+  <a class="navbar-brand text-white p-2" href="#">NSREP</a>
+  <div class="nav-icons">
+    <a href="{% url 'logout' %}">{{request.user}} Logout</a>
+    <a href="" class="icon">
+      <img
+        src="{% static 'dashboard/assets/images/profile.png'%}"
+        width="30"
+        height="30"
+        alt=""
+      />
+    </a>
+  </div>
+</nav>

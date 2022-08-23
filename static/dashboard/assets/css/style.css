@@ -1,0 +1,85 @@
+body {
+  background-color: #f4f6f9;
+}
+
+.navbar {
+  background-color: #262626;
+  box-shadow: 0 1px 0 0 black;
+}
+
+.icon {
+  padding: 1vw;
+}
+
+.icon img {
+  margin: 0;
+  padding: 0;
+  border-radius: 100%;
+}
+a {
+  color: aliceblue;
+  text-decoration: none !important;
+}
+a:hover {
+  text-decoration: none !important;
+  color: aliceblue;
+}
+
+.side-bar {
+  padding-top: 10vh;
+  width: 250px;
+  height: 100vh !important;
+  border: 1px solid #ccc !important;
+  background-color: #fff;
+  /* justify-content: space-between !important; */
+}
+
+.items {
+  padding-left: 1vw;
+  padding-right: 1vw;
+  justify-content: space-between !important;
+}
+
+.content {
+  padding-top: 7vh;
+  /* padding-left: 1vw;
+  padding-right: 2vw; */
+  padding-bottom: 3vh;
+  height: 100vh !important;
+  overflow: scroll;
+  margin: 0;
+}
+
+.content::-webkit-scrollbar {
+  display: none;
+}
+
+.custom-container {
+  padding: 0;
+  margin: 0;
+}
+
+.card-items {
+  color: #6c757d !important;
+  padding: 1vh;
+  height: 20vh !important;
+  border: 1px solid rgba(0, 0, 0, 0.125) !important;
+}
+
+hr {
+  background-color: #e2e5e5;
+}
+
+.Options {
+  opacity: 0.7;
+  font-size: small;
+}
+
+.top-heading {
+  padding-left: 1vw;
+  padding-top: 3vh;
+  border: 1px solid rgba(0, 0, 0, 0.125) !important;
+  background-color: #2c2945;
+  opacity: 0.9;
+  color: #babdbf;
+}

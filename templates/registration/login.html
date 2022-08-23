@@ -1,0 +1,61 @@
+<html lang="en">
+  {% load static %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{% static 'bootstrap/css/bootstrap.min.css' %}"
+    />
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}" />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="{% static 'login/assets/css/login_style.css' %}"
+    />
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-title text-center text-white">
+            <h3>NSRep Login</h3>
+            <hr />
+          </div>
+          <br />
+          <form method="post" class="form-group text-white">
+            {% csrf_token %}
+            <label for="username">username</label>
+            <input
+              type="text"
+              class="form-control"
+              name="username"
+              id="username"
+              autocomplete="off"
+            />
+            <br />
+            <label for="password">password</label>
+            <input
+              type="password"
+              class="form-control"
+              name="password"
+              id="password"
+              autocomplete="off"
+            />
+            <br />
+            <div class="bottom">
+              <a href="" class="forgot-link">forgot password?</a>
+              <input type="submit" value="login" class="btn text-white" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- bootstrap -->
+    <script src="{% static 'bootstrap/js/jquery-3.2.1.slim.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/popper.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+  </body>
+</html>

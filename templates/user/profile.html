@@ -1,0 +1,64 @@
+{% load static %}
+<div class="content" style="width: 100%">
+  <div class="top-heading">
+    <p>PROFILE</p>
+  </div>
+  <div class="container-fluid">
+    <div class="d-flex m-4">
+      <div
+        class="profile-pic card text-center p-4 mr-3"
+        style="width: 35rem; height: 30rem"
+      >
+        <img
+          class="card-img-top rounded mx-auto d-block"
+          src="{% static 'dashboard/assets/images/profile.png'%}"
+          alt="profile"
+          width="200"
+        />
+
+        <br />
+        <p>Demo</p>
+        <p>demo@gmail.com</p>
+        <input type="file" name="file" id="file" class="form-control" />
+      </div>
+      <div class="fields mx-3" style="width: 100%">
+        <form action="" method="post">
+          <div class="input-group flex-nowrap">
+            <span class="input-group-text">@</span>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Username"
+              aria-label="Username"
+            />
+          </div>
+          <br />
+          <label for="username">username</label>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            class="form-control"
+          /><br />
+          <label for="email">email</label>
+          <input type="text" name="email" id="email" class="form-control" />
+          <br />
+          <label for="password1">password</label>
+          <input
+            type="text"
+            name="password1"
+            id="password1"
+            class="form-control"
+          /><br />
+          <label for="password2">confirm password</label>
+          <input
+            type="text"
+            name="password2"
+            id="password2"
+            class="form-control"
+          />
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
