@@ -1,12 +1,10 @@
 <div class="content" style="width: 100%">
   <div class="top-heading">
-    <p>ADD MEMBER</p>
+    <p><i class="fa-solid fa-user-plus"></i>ADD MEMBER</p>
   </div>
   <div class="container-fluid">
     {% for message in messages %}
-    <div class="alert bg-success">
-      {{message}}
-    </div>
+    <div class="alert bg-success">{{message}}</div>
     {% endfor %}
 
     <form method="post" class="m-5">

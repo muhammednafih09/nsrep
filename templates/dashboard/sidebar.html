@@ -1,28 +1,44 @@
 <!-- side bar -->
 <div class="side-bar" id="mySidebar">
   <div class="items">
-    <p class="Options text-dark">SCANNERS</p>
-    <a href="{% url 'dashboard' %}" class="item text-dark">Scan Templates</a>
+    <p class="Options text-dark">
+      <i class="fa-solid fa-folder-tree"></i>SCANNERS
+    </p>
+    <a href="{% url 'dashboard' %}" class="item text-dark"
+      ><i class="fa-solid fa-file-shield"></i>Scan Templates</a
+    >
     <br /><br />
-    <a href="{% url 'reports' %}" class="item text-dark">Reports</a>
+    <a href="{% url 'reports' %}" class="item text-dark"
+      ><i class="fa-solid fa-file-contract"></i>Reports</a
+    >
     <br /><br />
-    <p class="Options text-dark">FOLDERS</p>
-    <a href="{% url 'my-scans' %}" class="item text-dark">My Scans</a>
+    <p class="Options text-dark"><i class="fa-solid fa-folder"></i>FOLDERS</p>
+    <a href="{% url 'my-scans' %}" class="item text-dark"
+      ><i class="fa-solid fa-viruses"></i>My Scans</a
+    >
     <br /><br />
-    <a href="{% url 'all-scans' %}" class="item text-dark">All Scans</a>
+    <a href="{% url 'all-scans' %}" class="item text-dark"
+      ><i class="fa-solid fa-bug"></i>All Scans</a
+    >
     <br /><br />
-    <p class="Options text-dark">TEAM</p>
-    <a href="{% url 'view-user' %}" class="item text-dark">Members</a>
+    <p class="Options text-dark"><i class="fa-solid fa-users"></i>TEAM</p>
+    <a href="{% url 'view-user' %}" class="item text-dark"
+      ><i class="fa-solid fa-users-rectangle"></i>Members</a
+    >
     <br /><br />
-    <a href="{% url 'add-user' %}" class="item text-dark">Add Member</a>
+    <a href="{% url 'add-user' %}" class="item text-dark"
+      ><i class="fa-solid fa-user-plus"></i>Add Member</a
+    >
     <br /><br />
-    <p class="Options text-dark">SETTINGS</p>
-    <a href="{% url 'profile' %}" class="item text-dark">Profile</a>
+    <p class="Options text-dark"><i class="fa-solid fa-gears"></i>SETTINGS</p>
+    <a href="{% url 'profile' %}" class="item text-dark"
+      ><i class="fa-solid fa-user"></i>Profile</a
+    >
     <br /><br />
-    <a href="{% url 'info' %}" class="item text-dark">Version Info</a>
+    <a href="{% url 'info' %}" class="item text-dark"
+      ><i class="fa-solid fa-circle-info"></i>Version Info</a
+    >
     <br /><br />
-    <br /><br />
-    <button class="item btn btn-sm btn-primary">Logout</button>
     <br /><br />
   </div>
 </div>
