@@ -13,14 +13,10 @@ def load_json_table_format(request):
     nmap = nmap3.Nmap()
     results = nmap.scan_top_ports(host)
 
-    dd = json.dumps(results)
+    print(results[host])
+    data = results[host]
 
-    # data = json.load(dd)
-    # print(data)
-    html = render_to_string(dd)
-    # return render(request, 'scan/scan.html', html)
-    return print(html)
-    # return render(request, 'scan/scan.html', results)
+    return render(request, 'scan/scan.html', data)
 
 
 @login_required(login_url='login')

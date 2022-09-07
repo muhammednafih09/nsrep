@@ -1,9 +1,10 @@
 <body>
-  <table>
-    {% for item_1, item_2 in host.items %}
+  <table class="table table-bordered">
+    {% for port in ports %}
     <tr>
-      <td>{{ item_1 }}</td>
-      <td>{{ item_2 }}</td>
+      <td>{{ port.protocol }}</td>
+      <td>{{ port.portid }}</td>
+      <td>{{ port.state }}</td>
     </tr>
     {% endfor %}
   </table>

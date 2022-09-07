@@ -25,6 +25,11 @@
             <hr />
           </div>
           <br />
+          {% if not user %}
+          <div class="text-center">
+            <p class="text-danger">incorrect username or password</p>
+          </div>
+          {% endif %}
           <form method="post" class="form-group text-white">
             {% csrf_token %}
             <label for="username">username</label>
