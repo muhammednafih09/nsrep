@@ -6,33 +6,22 @@
   <div class="container-fluid">
     <div class="d-flex m-4">
       <div
-        class="profile-pic card text-center p-4 mr-3"
-        style="width: 35rem; height: 30rem"
+        class="profile-pic card text-center p-4 mr-3 d-block"
+        style="width: 20rem; height: 20rem"
       >
         <img
-          class="card-img-top rounded mx-auto d-block"
+          class="card-img-top rounded mx-auto"
           src="{% static 'dashboard/assets/images/profile.png'%}"
           alt="profile"
           width="200"
         />
 
         <br />
-        <p>Demo</p>
-        <p>demo@gmail.com</p>
+        <br />
         <input type="file" name="file" id="file" class="form-control" />
       </div>
-      <div class="fields mx-3" style="width: 100%">
+      <div class="fields mx-3 d-block" style="width: 100%">
         <form action="" method="post">
-          <div class="input-group flex-nowrap">
-            <span class="input-group-text">@</span>
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Username"
-              aria-label="Username"
-            />
-          </div>
-          <br />
           <label for="username">username</label>
           <input
             type="text"
