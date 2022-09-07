@@ -5,24 +5,81 @@
   </div>
   <div class="container-fluid">
     <div class="row">
-      {% for key, values in items.items %}
       <div class="col-3">
         <a href="{% url 'scan-form' %}">
           <div class="card card-items m-3">
-            <div class="card-body">
-              <div class="icon"></div>
+            <div class="card-body p-1">
+              <div class="icon text-center">
+                <i class="fa-solid fa-earth-oceania"></i>
+              </div>
               <div class="card-title text-center">
-                <h5>{{ key }}</h5>
+                <h5>Host Discovery</h5>
               </div>
               <div class="card-text text-center">
-                <p>{{ values }}</p>
+                <p>A simple scan to discover live hosts and open ports</p>
               </div>
             </div>
           </div>
         </a>
         <br />
       </div>
-      {% endfor %}
+
+      <div class="col-3">
+        <a href="{% url 'scan-form' %}">
+          <div class="card card-items m-3">
+            <div class="card-body p-1">
+              <div class="icon text-center">
+                <i class="fa-solid fa-earth-oceania"></i>
+              </div>
+              <div class="card-title text-center">
+                <h5>Basic Network Scan</h5>
+              </div>
+              <div class="card-text text-center">
+                <p>A full system scan suitable for any host</p>
+              </div>
+            </div>
+          </div>
+        </a>
+        <br />
+      </div>
+
+      <div class="col-3">
+        <a href="{% url 'scan-form' %}">
+          <div class="card card-items m-3">
+            <div class="card-body p-1">
+              <div class="icon text-center">
+                <i class="fa-solid fa-earth-oceania"></i>
+              </div>
+              <div class="card-title text-center">
+                <h5>OS Detection</h5>
+              </div>
+              <div class="card-text text-center">
+                <p>A system scan to discover host Operating System</p>
+              </div>
+            </div>
+          </div>
+        </a>
+        <br />
+      </div>
+
+      <div class="col-3">
+        <a href="{% url 'scan-form' %}">
+          <div class="card card-items m-3">
+            <div class="card-body p-1">
+              <div class="icon text-center">
+                <i class="fa-solid fa-earth-oceania"></i>
+              </div>
+              <div class="card-title text-center">
+                <h5>Version Detection</h5>
+              </div>
+              <div class="card-text text-center">
+                <p>A system scan to discover service Versions</p>
+              </div>
+            </div>
+          </div>
+        </a>
+        <br />
+      </div>
     </div>
   </div>
 </div>
