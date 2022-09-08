@@ -22,23 +22,23 @@
     <div class="custom-container d-flex">
       {% include 'dashboard/sidebar.html' %} 
       {% if page == 'add-user' %} 
-      {% include 'user/add_user.html' %} 
+        {% include 'user/add_user.html' %} 
       {% elif page == 'view-user' %}
-      {% include 'user/view_user.html' %}
+        {% include 'user/view_user.html' %}
       {% elif page == 'profile' %}
-      {% include 'user/profile.html' %}
+        {% include 'user/profile.html' %}
       {% elif page == 'my-scans' %}
-      {% include 'user/my_scan.html' %}
+        {% include 'user/my_scan.html' %}
       {% elif page == 'all-scans' %}
-      {% include 'scan/all_scan.html' %}
+        {% include 'scan/all_scan.html' %}
       {% elif page == 'reports' %}
-      {% include 'scan/reports.html' %}
+        {% include 'scan/reports.html' %}
       {% elif page == 'info' %}
-      {% include 'scan/info.html' %}
+        {% include 'scan/info.html' %}
       {% elif page == 'scan-form' %}
-      {% include 'scan/scan_form.html' %}
+        {% include 'scan/config_form.html' %}
       {% else %}
-      {% include 'dashboard/main.html' %} 
+        {% include 'dashboard/main.html' %} 
       {% endif %}
     </div>
     {% endif %}

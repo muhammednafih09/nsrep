@@ -12,6 +12,8 @@ def load_json_table_format(request):
 
     nmap = nmap3.Nmap()
     results = nmap.scan_top_ports(host)
+    os_results = nmap.nmap_os_detection(host)
+    version_result = nmap.nmap_version_detection("your-host.com")
 
     print(results[host])
     data = results[host]
