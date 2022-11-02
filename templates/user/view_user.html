@@ -3,39 +3,56 @@
     <p><i class="fa-solid fa-users-rectangle"></i>VIEW MEMBERS</p>
   </div>
   <div class="container-fluid">
-    <div class="m-5">
-      <table class="table table-bordered table-hover text-center">
-        <thead class="table-dark">
-          <tr>
-            <th>id</th>
-            <th>profile pic</th>
-            <th>username</th>
-            <th>email</th>
-            <th>update</th>
-            <th>remove</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for data in users %}
-          <tr>
-            <td>{{data.id}}</td>
-            <td>{{data.last_login}}</td>
-            <td>{{data.username}}</td>
-            <td>{{data.email}}</td>
-            <td>
-              <a href="" class="text-success"
-                ><i class="fa-solid fa-pen-to-square"></i>Edit</a
-              >
-            </td>
-            <td>
-              <a href="" class="text-danger"
-                ><i class="fa-solid fa-xmark"></i>Remove</a
-              >
-            </td>
-          </tr>
-          {% endfor %}
-        </tbody>
-      </table>
+    <div class="container-fluid">
+      <!-- DataTables -->
+      <div class="card shadow m-3 bg-light">
+        <div
+          class="card-header py-3 d-flex flex-row align-items-center justify-content-between"
+        >
+          <h6 class="m-0 font-weight-bold text-primary">Members</h6>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table
+              class="table table-bordered table-hover text-center"
+              id="dataTable"
+              width="100%"
+              cellspacing="0"
+            >
+              <thead>
+                <tr>
+                  <th>id</th>
+                  <th>profile pic</th>
+                  <th>username</th>
+                  <th>email</th>
+                  <th>update</th>
+                  <th>remove</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for data in users %}
+                <tr>
+                  <td>{{data.id}}</td>
+                  <td>{{data.last_login}}</td>
+                  <td>{{data.username}}</td>
+                  <td>{{data.email}}</td>
+                  <td>
+                    <a href="" class="text-success"
+                      ><i class="fa-solid fa-pen-to-square"></i>Edit</a
+                    >
+                  </td>
+                  <td>
+                    <a href="" class="text-danger"
+                      ><i class="fa-solid fa-xmark"></i>Remove</a
+                    >
+                  </td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

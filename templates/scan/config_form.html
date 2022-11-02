@@ -1,13 +1,56 @@
-<div class="content" style="width: 100%">
-    <div class="top-heading">
-      <p>SCAN FORM</p>
-    </div>
-    <div class="container-fluid">
-      <div class="m-5">
-        <form action="" method="post" class="form-group text-white">
-          <label for="ip" class="form-label">IP ADDRESS</label>
-          <input type="text" name="ip" id="ip" class="form-control" />
-        </form>
+<html lang="en">
+  {% load static %} {% load bootstrap5 %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{% static 'bootstrap/css/bootstrap.min.css' %}"
+    />
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{% static "dashboard/assets/css/style.css" %}"
+    />
+    <!-- One file includes all the Font Awesome Free icons and utilities -->
+    <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
+    <link
+      href="{% static 'fontawesomefree/css/all.min.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <title>Scan Form</title>
+  </head>
+  <body>
+    <div class="content" style="width: 100%">
+      <div class="top-heading">
+        <p>SCAN FORM</p>
+      </div>
+      <div class="container-fluid">
+        <div class="m-5">
+          <form action="" method="post" class="form-group">
+            {% csrf_token %}
+            <label for="ip" class="form-label">IP ADDRESS</label>
+            <input
+              type="text"
+              name="ip"
+              id="ip"
+              class="form-control"
+              placeholder="ex: 192.168.1.1"
+            />
+            <br />
+            <input
+              type="submit"
+              value="Start Scan"
+              class="form-control btn btn-success"
+            />
+          </form>
+        </div>
       </div>
     </div>
-</div  
+    <!-- bootstrap -->
+    <script src="{% static 'bootstrap/js/jquery-3.2.1.slim.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/popper.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+  </body>
+</html>

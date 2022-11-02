@@ -3,18 +3,63 @@
     <p><i class="fa-solid fa-viruses"></i>MY SCANS</p>
   </div>
   <div class="container-fluid">
-    <div class="table-user m-5">
-      <table class="table table-bordered table-hover text-center">
-        <thead class="table-dark">
-          <tr>
-            <th>id</th>
-            <th>scan name</th>
-            <th>discription</th>
-            <th>template</th>
-            <th>report</th>
-          </tr>
-        </thead>
-      </table>
+    <!-- DataTables -->
+    <div class="card shadow m-3 bg-light">
+      <div
+        class="card-header py-3 d-flex flex-row align-items-center justify-content-between"
+      >
+        <h6 class="m-0 font-weight-bold text-primary">My Scan Reports</h6>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table
+            class="table table-bordered"
+            id="dataTable"
+            width="100%"
+            cellspacing="0"
+          >
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Scan Name</th>
+                <th>Description</th>
+                <th>Template</th>
+                <th>Report</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011/04/25</td>
+              </tr>
+              <tr>
+                <td>Garrett Winters</td>
+                <td>Accountant</td>
+                <td>Tokyo</td>
+                <td>63</td>
+                <td>2011/07/25</td>
+              </tr>
+              <tr>
+                <td>Ashton Cox</td>
+                <td>Junior Technical Author</td>
+                <td>San Francisco</td>
+                <td>66</td>
+                <td>2009/01/12</td>
+              </tr>
+              <tr>
+                <td>Donna Snider</td>
+                <td>Customer Support</td>
+                <td>New York</td>
+                <td>27</td>
+                <td>2011/01/25</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   </div>
 </div>

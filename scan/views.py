@@ -6,7 +6,7 @@ import json
 import nmap3
 
 @login_required(login_url='login')
-def load_json_table_format(request):
+def scanner(request):
     
     host = '127.0.0.1'
 
