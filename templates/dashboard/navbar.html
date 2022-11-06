@@ -3,14 +3,10 @@
 <nav class="navbar fixed-top">
   <a class="navbar-brand text-white p-2" href="#">NSREP</a>
   <div class="nav-icons">
-    <a href="{% url 'logout' %}">{{request.user}} Logout</a>
+    <a href="profile/" class="p-1">{{user.username}}</a>
+    <a href="{% url 'logout' %}" class="p-1">Logout</a>
     <a href="" class="icon">
-      <img
-        src="{% static 'dashboard/assets/images/profile.png'%}"
-        width="30"
-        height="30"
-        alt=""
-      />
+      <img src="{{ user.profile.image.url }}" width="30" height="30" alt="" />
     </a>
   </div>
 </nav>

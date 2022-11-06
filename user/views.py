@@ -29,26 +29,6 @@ def logoutUser(request):
     return redirect('login')
 
 
-# def registerUser(request):
-#     page = 'register'
-#     form = CustomUserCreationForm()
-
-#     if request.method == 'POST':
-#         form = CustomUserCreationForm(request.POST)
-#         if form.is_valid():
-#             user = form.save(commit=False)
-#             user.save()
-
-#             if user is not None:
-#                 login(request, user)
-#                 return redirect('dashboard')
-#         else:
-#             return redirect('login')
-
-#     context = {'form': form, 'page': page}
-#     return render(request, 'registration/login.html', context)
-
-
 @login_required(login_url='login')
 def loggedIn(request):
     return index(request)
@@ -78,8 +58,6 @@ def addUser(request):
 def viewUser(request):
     page = 'view-user'
 
-    # User = get_user_model()
-    # users = User.objects.all()
     users = User.objects.values()
 
 
