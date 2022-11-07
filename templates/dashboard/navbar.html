@@ -6,7 +6,7 @@
     <a href="profile/" class="p-1">{{user.username}}</a>
     <a href="{% url 'logout' %}" class="p-1">Logout</a>
     <a href="" class="icon">
-      <img src="{{ user.profile.image.url }}" width="30" height="30" alt="" />
+      <img src="{{ user.image.url }}" width="30" height="30" alt="" />
     </a>
   </div>
 </nav>

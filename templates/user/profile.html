@@ -11,7 +11,7 @@
       >
         <img
           class="card-img-top rounded mx-auto"
-          src="{% static 'dashboard/assets/images/profile.png'%}"
+          src="{{ user.image.url }}"
           alt="profile"
           width="200"
         />
@@ -22,6 +22,7 @@
       </div>
       <div class="fields mx-3 d-block" style="width: 100%">
         <form action="" method="post">
+          {% csrf_token %}
           <label for="username">username</label>
           <input
             type="text"
@@ -50,7 +51,6 @@
             id="password1"
             class="form-control"
             value=""
-            required
             placeholder="password"
           /><br />
           <label for="password2">confirm password</label>
@@ -60,8 +60,12 @@
             id="password2"
             class="form-control"
             value=""
-            required
             placeholder="confirm password"
+          /><br />
+          <input
+            type="submit"
+            value="save"
+            class="btn btn-success form-control"
           />
         </form>
       </div>

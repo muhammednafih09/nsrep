@@ -7,6 +7,7 @@ class CustomUserCreationForm(UserCreationForm):
     class Meta:
         model = User
         fields = [
+            'image',
             'username', 
             'email', 
             'password1', 
@@ -16,6 +17,8 @@ class CustomUserCreationForm(UserCreationForm):
 
     def __init__(self, *args, **kwargs):
         super(CustomUserCreationForm, self).__init__(*args, **kwargs)
+        self.fields['image'].widget.attrs.update(
+            {'class': 'form-control'})
         self.fields['username'].widget.attrs.update(
             {'class': 'form-control', 'placeholder': 'Enter username...'})
         self.fields['email'].widget.attrs.update(
