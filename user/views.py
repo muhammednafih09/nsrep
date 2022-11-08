@@ -5,6 +5,7 @@ from .forms import CustomUserCreationForm
 from dashboard.views import index
 from django.contrib import messages
 from django.contrib.auth.models import User
+from .models import TeamLead
 
 
 def loginUser(request):

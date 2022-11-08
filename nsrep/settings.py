@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'fontawesomefree',
     'login',
     'dashboard',
+    'user'
 ]
 
 MIDDLEWARE = [
@@ -133,5 +134,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # LOGIN_REDIRECT_URL = "dashboard"
 
-MEDIA_ROOT = BASE_DIR / 'media'
 MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join( BASE_DIR, 'media' )

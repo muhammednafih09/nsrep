@@ -4,25 +4,25 @@
     <p><i class="fa-solid fa-user"></i>PROFILE</p>
   </div>
   <div class="container-fluid">
-    <div class="d-flex m-4">
-      <div
-        class="profile-pic card text-center p-4 mr-3 d-block"
-        style="width: 20rem; height: 20rem"
-      >
-        <img
-          class="card-img-top rounded mx-auto"
-          src="{{ user.image.url }}"
-          alt="profile"
-          width="200"
-        />
+    <form action="" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <div class="d-flex m-4">
+        <div
+          class="profile-pic card text-center p-4 mr-3 d-block"
+          style="width: 20rem; height: 20rem"
+        >
+          <img
+            class="card-img-top rounded mx-auto"
+            src="{{ user.image.url }}"
+            alt="profile"
+            width="200"
+          />
 
-        <br />
-        <br />
-        <input type="file" name="file" id="file" class="form-control" />
-      </div>
-      <div class="fields mx-3 d-block" style="width: 100%">
-        <form action="" method="post">
-          {% csrf_token %}
+          <br />
+          <br />
+          <input type="file" name="file" id="file" class="form-control" />
+        </div>
+        <div class="fields mx-3 d-block" style="width: 100%">
           <label for="username">username</label>
           <input
             type="text"
@@ -67,8 +67,8 @@
             value="save"
             class="btn btn-success form-control"
           />
-        </form>
+        </div>
       </div>
-    </div>
+    </form>
   </div>
 </div>

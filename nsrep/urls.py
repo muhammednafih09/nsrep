@@ -23,4 +23,4 @@ urlpatterns = [
     path('', include("user.urls"), name='user'),
     path('scan/', include("scan.urls"), name='scan'),
     # path('dashboard/', include("dashboard.urls"), name='dashboard'),
-] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

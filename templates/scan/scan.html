@@ -1,11 +1,71 @@
-<body>
-  <table class="table table-bordered">
-    {% for port in ports %}
-    <tr>
-      <td>{{ port.protocol }}</td>
-      <td>{{ port.portid }}</td>
-      <td>{{ port.state }}</td>
-    </tr>
-    {% endfor %}
-  </table>
-</body>
+<html lang="en">
+  {% load static %} {% load bootstrap5 %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{% static 'bootstrap/css/bootstrap.min.css' %}"
+    />
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{% static "dashboard/assets/css/style.css" %}"
+    />
+    <!-- One file includes all the Font Awesome Free icons and utilities -->
+    <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
+    <link
+      href="{% static 'fontawesomefree/css/all.min.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <title>Scan Report</title>
+  </head>
+  <body>
+    {% if user.is_authenticated %} {% include 'dashboard/navbar.html' %}
+    <div class="custom-container d-flex">
+      {% include 'dashboard/sidebar.html' %} 
+      {% if page == 'add-user' %} 
+        {% include 'user/add_user.html' %} 
+      {% elif page == 'view-user' %}
+        {% include 'user/view_user.html' %}
+      {% elif page == 'profile' %}
+        {% include 'user/profile.html' %}
+      {% elif page == 'my-scans' %}
+        {% include 'user/my_scan.html' %}
+      {% elif page == 'all-scans' %}
+        {% include 'scan/all_scan.html' %}
+      {% elif page == 'reports' %}
+        {% include 'scan/reports.html' %}
+      {% elif page == 'info' %}
+        {% include 'scan/info.html' %}
+      {% elif page == 'scan-form' %}
+        {% include 'scan/config_form.html' %}
+      {% else %}
+      <div class="content" style="width: 100%">
+        <div class="top-heading">
+          <p>SCAN REPORT</p>
+        </div>
+        <div class="container-fluid">
+          <div class="m-5">
+            <table class="table table-bordered">
+              {% for port in ports %}
+              <tr>
+                <td>{{ port.protocol }}</td>
+                <td>{{ port.portid }}</td>
+                <td>{{ port.state }}</td>
+              </tr>
+              {% endfor %}
+            </table>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+    {% endif %}
+    <!-- bootstrap -->
+    <script src="{% static 'bootstrap/js/jquery-3.2.1.slim.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/popper.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+  </body>
+</html>

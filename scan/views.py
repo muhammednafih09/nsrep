@@ -18,7 +18,7 @@ def scanner(request):
     print(results[host])
     data = results[host]
 
-    return render(request, 'scan/scan.html', data)
+    return render(request, 'scan/scan.html')
 
 
 @login_required(login_url='login')
