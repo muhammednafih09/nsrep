@@ -26,3 +26,4 @@ def scan_form(request):
     page = "scan-form"
     context = {'page': page}
     return render(request, 'scan/scan_form.html', context)
+    
