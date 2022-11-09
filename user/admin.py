@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.contrib.auth.models import User
-from .models import TeamLead
+from .models import *
 
 # Register your models here.
-admin.site.register(TeamLead)
+# admin.site.register(TeamLead)
+# admin.site.register(Member)

@@ -5,7 +5,7 @@ from .forms import CustomUserCreationForm
 from dashboard.views import index
 from django.contrib import messages
 from django.contrib.auth.models import User
-from .models import TeamLead
+# from .models import TeamLead
 
 
 def loginUser(request):
@@ -52,6 +52,15 @@ def addUser(request):
     context = {'form': form, 'page': page}
     return render(request, 'base.html', context)
 
+
+@login_required(login_url='login')
+def deleteUser(request,pk):
+    page = 'delete-user'
+    user=User.objects.get(id=pk)
+    user.delete()
+    context = {'page': page}
+    return render(request, 'base.html', context)
+    
 
 @login_required(login_url='login')
 def viewUser(request):
